@@ -94,6 +94,8 @@ fn build_app(target: Option<String>) -> Result<()> {
     // Set pre-build environment if needed
     env::set_var("TAURI_SKIP_WEBVIEW_DOWNLOAD", "false");
     
+    // Build with cargo directly to exclude offline feature
+    // (avoids lzma-rust2 compilation which has compatibility issues)
     let mut args = vec!["tauri", "build"];
     let target_arg;
     

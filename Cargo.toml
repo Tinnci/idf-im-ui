@@ -1,3 +1,10 @@
 [workspace]
 members = ["src-tauri", "xtask"]
 resolver = "2"
+
+# Note: lzma-rust2 (pulled by idf-env→zip v7.0.0) has crc API compatibility issues.
+# This is a known upstream issue that doesn't affect our builds since:
+# 1. The offline_installer_builder (which needs this) requires explicit "offline" feature
+# 2. Default build does NOT include offline feature
+# To build offline_installer_builder, use: cargo build --features offline
+

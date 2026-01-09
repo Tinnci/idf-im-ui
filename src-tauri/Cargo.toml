@@ -105,7 +105,7 @@ anyhow = "^1.0"
 rust_search = "2.1.0"
 flate2 = { version = "1.0", default-features = false, features = ["rust_backend"] }
 tar = { version = "0.4", default-features = false }
-zip = { version = "2.2.2", default-features = true }
+zip = { version = "2.2.2", default-features = false, features = ["deflate", "bzip2"] }
 lzma-rs = "0.3.0"
 thiserror = "1.0"
 rust-i18n = "3.0.1"
