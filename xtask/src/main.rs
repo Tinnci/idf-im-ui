@@ -242,6 +242,8 @@ fn setup_debian_ubuntu() -> Result<()> {
     args.extend(&deps);
     run_command("sudo", &args)?;
     
+    setup_linuxdeploy()?;
+    
     Ok(())
 }
 
@@ -266,6 +268,8 @@ fn setup_fedora_rhel() -> Result<()> {
     let mut args = vec!["dnf", "install", "-y"];
     args.extend(&deps);
     run_command("sudo", &args)?;
+    
+    setup_linuxdeploy()?;
     
     Ok(())
 }
@@ -298,6 +302,8 @@ fn setup_arch() -> Result<()> {
     } else {
         println!("   ⚠️  Some packages were already installed or not found (this is OK)");
     }
+    
+    setup_linuxdeploy()?;
     
     Ok(())
 }
@@ -340,6 +346,64 @@ fn setup_windows() -> Result<()> {
     println!("   - Microsoft Visual Studio C++ build tools");
     println!("   - WebView2 Runtime");
     println!("   - Rust toolchain");
+    
+    Ok(())
+}
+
+fn setup_linuxdeploy() -> Result<()> {
+    println!("📦 Setting up linuxdeploy for AppImage support...");
+    
+    // Check if linuxdeploy is already installed
+    let which_status = Command::new("which")
+        .arg("linuxdeploy")
+        .status();
+    
+    if which_status.is_ok() && which_status?.success() {
+        println!("   ✅ linuxdeploy is already installed");
+        return Ok(());
+    }
+    
+    println!("   Installing linuxdeploy...");
+    
+    let home_dir = std::env::var("HOME")
+        .unwrap_or_else(|_| "/root".to_string());
+    let local_bin_dir = format!("{}/.local/bin", home_dir);
+    
+    // Create .local/bin if it doesn't exist
+    std::fs::create_dir_all(&local_bin_dir)?;
+    
+    let linuxdeploy_path = format!("{}/linuxdeploy-x86_64.AppImage", local_bin_dir);
+    
+    println!("   Downloading linuxdeploy...");
+    let status = Command::new("curl")
+        .args(&[
+            "-L",
+            "-o", &linuxdeploy_path,
+            "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
+        ])
+        .status()?;
+    
+    if !status.success() {
+        anyhow::bail!("Failed to download linuxdeploy");
+    }
+    
+    // Make it executable
+    println!("   Making linuxdeploy executable...");
+    let status = Command::new("chmod")
+        .args(&["+x", &linuxdeploy_path])
+        .status()?;
+    
+    if !status.success() {
+        anyhow::bail!("Failed to make linuxdeploy executable");
+    }
+    
+    // Create symlink to linuxdeploy in PATH
+    let symlink_target = format!("{}/linuxdeploy", local_bin_dir);
+    let _ = std::fs::remove_file(&symlink_target);
+    std::os::unix::fs::symlink(&linuxdeploy_path, &symlink_target)?;
+    
+    println!("   ✅ linuxdeploy installed successfully at {}", linuxdeploy_path);
+    println!("   💡 Make sure ~/.local/bin is in your PATH");
     
     Ok(())
 }
