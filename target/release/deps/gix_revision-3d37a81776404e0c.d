@@ -1,0 +1,11 @@
+/home/drie/idf-im-ui/target/release/deps/gix_revision-3d37a81776404e0c.d: /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/lib.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/delegate.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/function.rs
+
+/home/drie/idf-im-ui/target/release/deps/libgix_revision-3d37a81776404e0c.rlib: /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/lib.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/delegate.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/function.rs
+
+/home/drie/idf-im-ui/target/release/deps/libgix_revision-3d37a81776404e0c.rmeta: /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/lib.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/delegate.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/function.rs
+
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/lib.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/mod.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/mod.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/delegate.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-revision-0.37.0/src/spec/parse/function.rs:

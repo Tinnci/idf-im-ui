@@ -1,0 +1,12 @@
+/home/drie/idf-im-ui/target/release/deps/gix_glob-35b075309998bc81.d: /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/lib.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/pattern.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/pattern.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/wildmatch.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/parse.rs
+
+/home/drie/idf-im-ui/target/release/deps/libgix_glob-35b075309998bc81.rlib: /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/lib.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/pattern.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/pattern.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/wildmatch.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/parse.rs
+
+/home/drie/idf-im-ui/target/release/deps/libgix_glob-35b075309998bc81.rmeta: /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/lib.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/pattern.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/mod.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/pattern.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/wildmatch.rs /home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/parse.rs
+
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/lib.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/pattern.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/mod.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/search/pattern.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/wildmatch.rs:
+/home/drie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gix-glob-0.22.1/src/parse.rs:

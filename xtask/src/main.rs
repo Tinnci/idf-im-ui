@@ -273,7 +273,7 @@ fn setup_arch() -> Result<()> {
     println!("   (This will require sudo)");
     
     let deps = vec![
-        "webkit2gtk",
+        "webkit2gtk-4.1",
         "glib2",
         "base-devel",
         "curl",
