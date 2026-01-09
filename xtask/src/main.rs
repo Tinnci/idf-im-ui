@@ -49,6 +49,10 @@ enum Commands {
     #[command(name = "install")]
     Install,
 
+    /// Install to system (requires sudo)
+    #[command(name = "install-system")]
+    InstallSystem,
+
     /// Setup system dependencies
     #[command(name = "setup")]
     Setup,
@@ -74,6 +78,7 @@ fn main() -> Result<()> {
         Commands::Test => test_code()?,
         Commands::Clean => clean_build()?,
         Commands::Install => install_app()?,
+        Commands::InstallSystem => install_system()?,
         Commands::Setup => setup_system()?,
         Commands::All { target } => {
             println!("Running full build pipeline...\n");
@@ -174,6 +179,34 @@ fn install_app() -> Result<()> {
     run_command("cargo", &["tauri", "build"])?;
     
     println!("✅ Installation completed!");
+    Ok(())
+}
+
+fn install_system() -> Result<()> {
+    println!("📦 Installing eim to system...");
+    println!("   (This will require sudo)\n");
+    
+    // Check if binary exists, if not build it
+    if !std::path::Path::new("target/release/eim").exists() {
+        println!("📍 Building release binary first...");
+        build_app(None)?;
+    } else {
+        println!("✅ Binary already built at target/release/eim");
+    }
+    
+    // Install to system
+    println!("\n📍 Installing binary to /usr/local/bin/eim");
+    run_command("sudo", &["install", "-Dm755", "target/release/eim", "/usr/local/bin/eim"])?;
+    
+    println!("📍 Installing man page to /usr/share/man/man1/eim.1");
+    run_command("sudo", &["install", "-Dm644", "man/eim.1", "/usr/share/man/man1/eim.1"])?;
+    
+    println!("\n✅ Installation completed!");
+    println!("💡 You can now run:");
+    println!("   - 'eim' or 'eim gui' for the GUI");
+    println!("   - 'eim <command>' for CLI operations");
+    println!("   - 'man eim' to view the manual");
+    
     Ok(())
 }
 
