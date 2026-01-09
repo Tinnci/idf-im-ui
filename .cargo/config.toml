@@ -1,6 +1,9 @@
 [net]
 git-fetch-with-cli = true
 
+[alias]
+xtask = "run --package xtask --"
+
 [target.i686-pc-windows-gnu]
 linker = "/usr/bin/i686-w64-mingw32-gcc"
 ar = "/usr/i686-w64-mingw32/bin/ar"
